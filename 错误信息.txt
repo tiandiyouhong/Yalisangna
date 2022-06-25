@@ -1,0 +1,22 @@
+﻿flag_error = 1;遥信参数设置错误
+flag_error = 2;
+
+
+
+参数设置错误
+flag_error = 3;SOE参数设置错误
+flag_error = 4;读配置参数设置错误
+flag_error = 5;遥控
+flag_error = 6;遥调
+flag_error = 7;读版本号
+flag_error = 8;设置总电量
+flag_error = 9;公共参数设置错误
+
+flag_error = 101;遥控型号选择错误参数设置错误（当标准模式和特殊模式选择关闭时会报错）只需要在遥控按键中判断即可
+flag_error = 102;发送过程中发现通讯断开状态
+flag_error = 103;接收过程中发现通讯断开状态
+
+
+
+
+reciviedRight;0接收正确、1没有收到数据、2收到数据但是为错误数据、3收到数据但是表示动作拒动、4返回02开头的（超时或发送放入档案错误）

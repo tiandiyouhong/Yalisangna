@@ -13,6 +13,7 @@ namespace 电源生产测试软件
     partial class Form_Main
     {
         string flag_btnclick = "遥信";                 //定义点击的按键标志位
+        string flag_btnclick_pwr = "关机";                 //定义点击的按键标志位
         static int[] CRCHI = new int[]  {
             0x00,0xc1,0x81,0x40,0x01,0xc0,0x80,0x41,0x01,0xc0,0x80,0x41,0x00,0xc1,0x81,
             0x40,0x01,0xc0,0x80,0x41,0x00,0xc1,0x81,0x40,0x00,0xc1,0x81,0x40,0x01,0xc0,
@@ -212,6 +213,9 @@ namespace 电源生产测试软件
         char[] Ver = new char[32];
         byte[] BMS_Ver_A1_Read = new byte[64];
         byte[] Com_Rc_Data = new byte[1024];
+        char[] Dc_Pwr_Vol = new char[6];
+        char[] Dc_Pwr_Cur = new char[6];
+        char[] Dc_Pwr_P = new char[6];
         public static UInt16 Com_Rc_Data_Lenth;
         public UInt16 Recorder_len;
         public UInt16 Recorder_num;
@@ -1113,107 +1117,88 @@ namespace 电源生产测试软件
         public void ArrayForDc_elec_pwr()
         {
             Array_Load.Clear();//清空逆变器动态数组
-            switch (flag_btnclick)
+            switch (flag_btnclick_pwr)
             {
                 case "程控模式":
-                    Array_Load.Add(Convert.ToByte(0xAA));//1
-                    Array_Load.Add(Convert.ToByte(0x00));//2
-                    Array_Load.Add(Convert.ToByte(0x20));//3
-                    Array_Load.Add(Convert.ToByte(0x01));//4**
-                    Array_Load.Add(Convert.ToByte(0));   //5
-                    Array_Load.Add(Convert.ToByte(0));   //6
-                    Array_Load.Add(Convert.ToByte(0));   //7
-                    Array_Load.Add(Convert.ToByte(0));   //8
-                    Array_Load.Add(Convert.ToByte(0));   //9
-                    Array_Load.Add(Convert.ToByte(0));   //10
-                    Array_Load.Add(Convert.ToByte(0));   //11
-                    Array_Load.Add(Convert.ToByte(0));   //12
-                    Array_Load.Add(Convert.ToByte(0));   //13
-                    Array_Load.Add(Convert.ToByte(0));   //14
-                    Array_Load.Add(Convert.ToByte(0));   //15
-                    Array_Load.Add(Convert.ToByte(0));   //16
-                    Array_Load.Add(Convert.ToByte(0));   //17
-                    Array_Load.Add(Convert.ToByte(0));   //18
-                    Array_Load.Add(Convert.ToByte(0));   //19
-                    Array_Load.Add(Convert.ToByte(0));   //20
-                    Array_Load.Add(Convert.ToByte(0));   //21
-                    Array_Load.Add(Convert.ToByte(0));   //22
-                    Array_Load.Add(Convert.ToByte(0));   //23
-                    Array_Load.Add(Convert.ToByte(0));   //24
-                    Array_Load.Add(Convert.ToByte(0));   //25
-
+                    Array_Load.Add(Convert.ToByte('S'));//1
+                    Array_Load.Add(Convert.ToByte('Y'));//2
+                    Array_Load.Add(Convert.ToByte('S'));//3
+                    Array_Load.Add(Convert.ToByte('T'));//4**
+                    Array_Load.Add(Convert.ToByte(':'));   //5
+                    Array_Load.Add(Convert.ToByte('R'));   //6
+                    Array_Load.Add(Convert.ToByte('E'));   //7
+                    Array_Load.Add(Convert.ToByte('M'));   //8
                     break;
                 case "手动模式":
-                    Array_Load.Add(Convert.ToByte(0xAA));//1
-                    Array_Load.Add(Convert.ToByte(0x00));//2
-                    Array_Load.Add(Convert.ToByte(0x20));//3
-                    Array_Load.Add(Convert.ToByte(0x00));//4**
-                    Array_Load.Add(Convert.ToByte(0));   //5
-                    Array_Load.Add(Convert.ToByte(0));   //6
-                    Array_Load.Add(Convert.ToByte(0));   //7
-                    Array_Load.Add(Convert.ToByte(0));   //8
-                    Array_Load.Add(Convert.ToByte(0));   //9
-                    Array_Load.Add(Convert.ToByte(0));   //10
-                    Array_Load.Add(Convert.ToByte(0));   //11
-                    Array_Load.Add(Convert.ToByte(0));   //12
-                    Array_Load.Add(Convert.ToByte(0));   //13
-                    Array_Load.Add(Convert.ToByte(0));   //14
-                    Array_Load.Add(Convert.ToByte(0));   //15
-                    Array_Load.Add(Convert.ToByte(0));   //16
-                    Array_Load.Add(Convert.ToByte(0));   //17
-                    Array_Load.Add(Convert.ToByte(0));   //18
-                    Array_Load.Add(Convert.ToByte(0));   //19
-                    Array_Load.Add(Convert.ToByte(0));   //20
-                    Array_Load.Add(Convert.ToByte(0));   //21
-                    Array_Load.Add(Convert.ToByte(0));   //22
-                    Array_Load.Add(Convert.ToByte(0));   //23
-                    Array_Load.Add(Convert.ToByte(0));   //24
-                    Array_Load.Add(Convert.ToByte(0));   //25
+                    Array_Load.Add(Convert.ToByte('S'));//1
+                    Array_Load.Add(Convert.ToByte('Y'));//2
+                    Array_Load.Add(Convert.ToByte('S'));//3
+                    Array_Load.Add(Convert.ToByte('T'));//4**
+                    Array_Load.Add(Convert.ToByte(':'));   //5
+                    Array_Load.Add(Convert.ToByte('L'));   //6
+                    Array_Load.Add(Convert.ToByte('O'));   //7
+                    Array_Load.Add(Convert.ToByte('C'));   //8
                     break;
                 case "开机":
-                    Array_Load.Add(Convert.ToByte("O"));//1
+                    Array_Load.Add(Convert.ToByte('O'));//1
                     Array_Load.Add(Convert.ToByte('U'));//2
                     Array_Load.Add(Convert.ToByte('T'));//3
                     Array_Load.Add(Convert.ToByte('P'));//4
-                    Array_Load.Add(Convert.ToByte('1'));   //5
-                    
+                    Array_Load.Add(Convert.ToByte(' '));//5
+                    Array_Load.Add(Convert.ToByte('1'));//6
+
                     break;
                 case "关机":
-                    Array_Load.Add(Convert.ToByte("O"));//1
+                    Array_Load.Add(Convert.ToByte('O'));//1
                     Array_Load.Add(Convert.ToByte('U'));//2
                     Array_Load.Add(Convert.ToByte('T'));//3
                     Array_Load.Add(Convert.ToByte('P'));//4
-                    Array_Load.Add(Convert.ToByte('1'));   //5
+                    Array_Load.Add(Convert.ToByte(' '));//5
+                    Array_Load.Add(Convert.ToByte('0'));//6
+                    break;
+                case "电压给定":
+                    Array_Load.Add(Convert.ToByte('V'));//1
+                    Array_Load.Add(Convert.ToByte('O'));//2
+                    Array_Load.Add(Convert.ToByte('L'));//3
+                    Array_Load.Add(Convert.ToByte('T'));//4
+                    Array_Load.Add(Convert.ToByte(' '));//5
+                    Array_Load.Add(Convert.ToByte('0'));//6
+                    break;
+                case "读取电流":
+                    Array_Load.Add(Convert.ToByte('F'));//1
+                    Array_Load.Add(Convert.ToByte('E'));//2
+                    Array_Load.Add(Convert.ToByte('T'));//3
+                    Array_Load.Add(Convert.ToByte('C'));//4
+                    Array_Load.Add(Convert.ToByte(':'));//5
+                    Array_Load.Add(Convert.ToByte('C'));//6
+                    Array_Load.Add(Convert.ToByte('U'));//7
+                    Array_Load.Add(Convert.ToByte('R'));//8
+                    Array_Load.Add(Convert.ToByte('R'));//9
+                    Array_Load.Add(Convert.ToByte('?'));//10
                     break;
                 case "读取电压":
-                    Array_Load.Add(Convert.ToByte(0xAA));//1
-                    Array_Load.Add(Convert.ToByte(0x00));//2
-                    Array_Load.Add(Convert.ToByte(0x5F));//3
-                    Array_Load.Add(Convert.ToByte(0x00));//4**
-                    Array_Load.Add(Convert.ToByte(0));   //5
-                    Array_Load.Add(Convert.ToByte(0));   //6
-                    Array_Load.Add(Convert.ToByte(0));   //7
-                    Array_Load.Add(Convert.ToByte(0));   //8
-                    Array_Load.Add(Convert.ToByte(0));   //9
-                    Array_Load.Add(Convert.ToByte(0));   //10
-                    Array_Load.Add(Convert.ToByte(0));   //11
-                    Array_Load.Add(Convert.ToByte(0));   //12
-                    Array_Load.Add(Convert.ToByte(0));   //13
-                    Array_Load.Add(Convert.ToByte(0));   //14
-                    Array_Load.Add(Convert.ToByte(0));   //15
-                    Array_Load.Add(Convert.ToByte(0));   //16
-                    Array_Load.Add(Convert.ToByte(0));   //17
-                    Array_Load.Add(Convert.ToByte(0));   //18
-                    Array_Load.Add(Convert.ToByte(0));   //19
-                    Array_Load.Add(Convert.ToByte(0));   //20
-                    Array_Load.Add(Convert.ToByte(0));   //21
-                    Array_Load.Add(Convert.ToByte(0));   //22
-                    Array_Load.Add(Convert.ToByte(0));   //23
-                    Array_Load.Add(Convert.ToByte(0));   //24
-                    Array_Load.Add(Convert.ToByte(0));   //25
+                    Array_Load.Add(Convert.ToByte('F'));//1
+                    Array_Load.Add(Convert.ToByte('E'));//2
+                    Array_Load.Add(Convert.ToByte('T'));//3
+                    Array_Load.Add(Convert.ToByte('C'));//4
+                    Array_Load.Add(Convert.ToByte(':'));//5
+                    Array_Load.Add(Convert.ToByte('V'));//6
+                    Array_Load.Add(Convert.ToByte('O'));//7
+                    Array_Load.Add(Convert.ToByte('L'));//8
+                    Array_Load.Add(Convert.ToByte('T'));//9
+                    Array_Load.Add(Convert.ToByte('?'));//10
                     break;
-               
-             
+                case "读取功率":
+                    Array_Load.Add(Convert.ToByte('F'));//1
+                    Array_Load.Add(Convert.ToByte('E'));//2
+                    Array_Load.Add(Convert.ToByte('T'));//3
+                    Array_Load.Add(Convert.ToByte('C'));//4
+                    Array_Load.Add(Convert.ToByte(':'));//5
+                    Array_Load.Add(Convert.ToByte('P'));//6
+                    Array_Load.Add(Convert.ToByte('O'));//7
+                    Array_Load.Add(Convert.ToByte('W'));//8
+                    Array_Load.Add(Convert.ToByte('?'));//10
+                    break;
 
                 default:
                     MessageBox.Show("本软件无此功能！", "提示！");
@@ -1223,7 +1208,7 @@ namespace 电源生产测试软件
 
             Array_Load.Add(Convert.ToByte(0x0D));   //25
             Array_Load.Add(Convert.ToByte(0x0A));   //25
-            ADD8_Add(Array_Load);
+          //  ADD8_Add(Array_Load);
 
         }
         /// <summary>
@@ -2201,9 +2186,13 @@ namespace 电源生产测试软件
                     }
                     break;
                 case "读取电流":
-                    if (Com_Rc_Data[0] == 0xAA && Com_Rc_Data[2] == 0x5F)
+                    if (Com_Rc_Data_Lenth==6)
                     {
                         reciviedRight = 4;
+                        for (int i = 0; i < 6; i++)
+                        {
+                            Dc_Pwr_Cur[i] = (char)Com_Rc_Data[i];
+                        }
                     }
                     else
                     {
@@ -2211,75 +2200,27 @@ namespace 电源生产测试软件
                     }
                     break;
                 case "读取电压":
-                    if (Com_Rc_Data[0] == 0xAA && Com_Rc_Data[2] == 0x5F)
+                    if (Com_Rc_Data_Lenth == 6)
                     {
-                        UInt32 temp = 0;
-                        temp = Com_Rc_Data[6];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[5];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[4];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[3];
-                         if (temp % 1000 > 99)
-                        {
-                            负载电压.Text = (temp / 1000).ToString() + "." + (temp % 1000).ToString();
-                        }
-                        else if (temp % 1000 > 9)
-                        {
-                            负载电压.Text = (temp / 1000).ToString() + ".0" + (temp % 1000).ToString();
-                        }
-                        else
-                        {
-                            负载电压.Text = (temp / 1000).ToString() + ".00" + (temp % 1000).ToString();
-                        }
-              
-                        temp = 0;
-                        temp = Com_Rc_Data[10];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[9];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[8];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[7];
-                        if (temp % 10000 > 999)
-                        {
-                            负载电流.Text = (temp / 10000).ToString() + "." + (temp % 10000).ToString();
-                        }
-                        else if (temp % 10000 > 99)
-                        {
-                            负载电流.Text = (temp / 10000).ToString() + ".0" + (temp % 10000).ToString();
-                        }
-                        else if (temp % 10000 > 9)
-                        {
-                            负载电流.Text = (temp / 10000).ToString() + ".00" + (temp % 10000).ToString();
-                        }
-                        else 
-                        {
-                            负载电流.Text = (temp / 10000).ToString() + ".000" + (temp % 10000).ToString();
-                        }
-                            temp = 0;
-                        temp = Com_Rc_Data[14];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[13];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[12];
-                        temp = temp << 8;
-                        temp += Com_Rc_Data[11];
-  
-                        if (temp % 1000 > 99)
-                        {
-                            负载功率.Text = (temp / 1000).ToString() + "." + (temp % 1000).ToString();
-                        }
-                        else if (temp % 1000 > 9)
-                        {
-                            负载功率.Text = (temp / 1000).ToString() + ".0" + (temp % 1000).ToString();
-                        }
-                        else
-                        {
-                            负载功率.Text = (temp / 1000).ToString() + ".00" + (temp % 1000).ToString();
-                        }
                         reciviedRight = 4;
+                        for (int i = 0; i < 6; i++)
+                        {
+                            Dc_Pwr_Vol[i] = (char)Com_Rc_Data[i];
+                        }
+                    }
+                    else
+                    {
+                        reciviedRight = 2;
+                    }
+                    break;
+                case "读取功率":
+                    if (Com_Rc_Data_Lenth == 6)
+                    {
+                        reciviedRight = 4;
+                        for (int i = 0; i < 6; i++)
+                        {
+                            Dc_Pwr_P[i] = (char)Com_Rc_Data[i];
+                        }
                     }
                     else
                     {
@@ -3264,6 +3205,32 @@ namespace 电源生产测试软件
             return BITE;
         }
 
+        public static char[] String_to_char(string STR)//字符串转数组
+        {
+            char[] BITE = new char[STR.Length];
+            char High = '0';
+            for (int i = 0; i < BITE.Length; i++)
+            {
+                switch (STR.Substring(i, 1))
+                {
+                    case "0": High = '0'; break;
+                    case "1": High = '1'; break;
+                    case "2": High = '2'; break;
+                    case "3": High = '3'; break;
+                    case "4": High = '4'; break;
+                    case "5": High = '5'; break;
+                    case "6": High = '6'; break;
+                    case "7": High = '7'; break;
+                    case "8": High = '8'; break;
+                    case "9": High = '9'; break;
+                    case ".": High = '.'; break;
+                }
+
+                BITE[i] = High;
+            }
+            return BITE;
+        }
+
         public void Byte_to_Bmsfault(Byte[] a)//字符串转数组
         {
             UInt16 FF = 256;
@@ -3417,30 +3384,30 @@ namespace 电源生产测试软件
                 Flag_Com = 0;
                 Com_OverTime_ctc = 0;
             Time_Delay_MS(150);
-//            while (Flag_Com == 0)
-//                {
-//                    Time_Delay_MS(5);
-//                    Com_OverTime_ctc++;
-//                    if (Com_OverTime_ctc == 1500)
-//                    {
-//                        SendData_ShowData();
-//                    }
-//                    else if (Com_OverTime_ctc == 2000)
-//                    {
-//                        SendData_ShowData();
-//}
-//                    else if(Com_OverTime_ctc == 3000)
-//                    {
-//                        SendData_ShowData();
-//                    }
-//                    else if (Com_OverTime_ctc > 4000)
-//                    {
-//                        Com_OverTime_ctc = 0;
-//                        break;
-//                    }
-//                }
+            while (Flag_Com == 0)
+            {
+                Time_Delay_MS(5);
+                Com_OverTime_ctc++;
+                if (Com_OverTime_ctc == 1500)
+                {
+                    SendData_ShowData();
+                }
+                else if (Com_OverTime_ctc == 2000)
+                {
+                    SendData_ShowData();
+                }
+                else if (Com_OverTime_ctc == 3000)
+                {
+                    SendData_ShowData();
+                }
+                else if (Com_OverTime_ctc > 4000)
+                {
+                    Com_OverTime_ctc = 0;
+                    break;
+                }
+            }
         }
-    
+
     }
     //下面讲一个打开窗体定时执行按钮的东西
 

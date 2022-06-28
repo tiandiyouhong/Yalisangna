@@ -155,6 +155,31 @@
             this.textBox_YXStartAddress = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.直流源电压设定值 = new System.Windows.Forms.TextBox();
+            this.开机按钮 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.关机按钮 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.直流源电流设定值 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button21 = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
+            this.直流源功率 = new System.Windows.Forms.TextBox();
+            this.直流源电压 = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.直流源电流 = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.textBox_fasong = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button14 = new System.Windows.Forms.Button();
@@ -182,31 +207,6 @@
             this.连接负载 = new System.Windows.Forms.Button();
             this.负载指示 = new System.Windows.Forms.PictureBox();
             this.负载连接 = new System.Windows.Forms.GroupBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.开机按钮 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.关机按钮 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button21 = new System.Windows.Forms.Button();
-            this.label59 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -220,15 +220,15 @@
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SOE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.负载指示)).BeginInit();
             this.负载连接.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -1629,6 +1629,301 @@
             this.label10.Size = new System.Drawing.Size(0, 12);
             this.label10.TabIndex = 0;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(823, 373);
+            this.tabPage2.TabIndex = 7;
+            this.tabPage2.Text = "直流源";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.Controls.Add(this.直流源电压设定值);
+            this.panel3.Controls.Add(this.开机按钮);
+            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.button9);
+            this.panel3.Controls.Add(this.关机按钮);
+            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.label53);
+            this.panel3.Controls.Add(this.label55);
+            this.panel3.Controls.Add(this.label56);
+            this.panel3.Controls.Add(this.label57);
+            this.panel3.Controls.Add(this.直流源电流设定值);
+            this.panel3.Location = new System.Drawing.Point(17, 11);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(376, 350);
+            this.panel3.TabIndex = 318;
+            // 
+            // 直流源电压设定值
+            // 
+            this.直流源电压设定值.Font = new System.Drawing.Font("黑体", 10.5F);
+            this.直流源电压设定值.Location = new System.Drawing.Point(80, 22);
+            this.直流源电压设定值.Name = "直流源电压设定值";
+            this.直流源电压设定值.Size = new System.Drawing.Size(74, 23);
+            this.直流源电压设定值.TabIndex = 293;
+            this.直流源电压设定值.Text = "00.000";
+            // 
+            // 开机按钮
+            // 
+            this.开机按钮.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.开机按钮.Location = new System.Drawing.Point(132, 279);
+            this.开机按钮.Name = "开机按钮";
+            this.开机按钮.Size = new System.Drawing.Size(86, 60);
+            this.开机按钮.TabIndex = 307;
+            this.开机按钮.Text = "开机";
+            this.开机按钮.UseVisualStyleBackColor = true;
+            this.开机按钮.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button8.Location = new System.Drawing.Point(15, 213);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(86, 60);
+            this.button8.TabIndex = 306;
+            this.button8.Text = "手动模式";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // button9
+            // 
+            this.button9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button9.Location = new System.Drawing.Point(15, 279);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(86, 60);
+            this.button9.TabIndex = 305;
+            this.button9.Text = "程控模式";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
+            // 关机按钮
+            // 
+            this.关机按钮.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.关机按钮.Location = new System.Drawing.Point(260, 279);
+            this.关机按钮.Name = "关机按钮";
+            this.关机按钮.Size = new System.Drawing.Size(86, 60);
+            this.关机按钮.TabIndex = 301;
+            this.关机按钮.Text = "关机";
+            this.关机按钮.UseVisualStyleBackColor = true;
+            this.关机按钮.Click += new System.EventHandler(this.button11_Click_1);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button12.Location = new System.Drawing.Point(224, 56);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(99, 43);
+            this.button12.TabIndex = 310;
+            this.button12.Text = "I_set";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button15.Location = new System.Drawing.Point(223, 12);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(99, 43);
+            this.button15.TabIndex = 310;
+            this.button15.Text = "V_set";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.SkyBlue;
+            this.label53.Font = new System.Drawing.Font("黑体", 14.25F);
+            this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label53.Location = new System.Drawing.Point(20, 24);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(59, 19);
+            this.label53.TabIndex = 291;
+            this.label53.Text = "电压:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.SkyBlue;
+            this.label55.Font = new System.Drawing.Font("黑体", 14.25F);
+            this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label55.Location = new System.Drawing.Point(161, 69);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(19, 19);
+            this.label55.TabIndex = 292;
+            this.label55.Text = "A";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.SkyBlue;
+            this.label56.Font = new System.Drawing.Font("黑体", 14.25F);
+            this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label56.Location = new System.Drawing.Point(18, 68);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(59, 19);
+            this.label56.TabIndex = 294;
+            this.label56.Text = "电流:";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.SkyBlue;
+            this.label57.Font = new System.Drawing.Font("黑体", 14.25F);
+            this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label57.Location = new System.Drawing.Point(163, 24);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(19, 19);
+            this.label57.TabIndex = 295;
+            this.label57.Text = "V";
+            // 
+            // 直流源电流设定值
+            // 
+            this.直流源电流设定值.Font = new System.Drawing.Font("黑体", 10.5F);
+            this.直流源电流设定值.Location = new System.Drawing.Point(79, 65);
+            this.直流源电流设定值.Name = "直流源电流设定值";
+            this.直流源电流设定值.Size = new System.Drawing.Size(74, 23);
+            this.直流源电流设定值.TabIndex = 296;
+            this.直流源电流设定值.Text = "0.0000";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel4.Controls.Add(this.button21);
+            this.panel4.Controls.Add(this.label59);
+            this.panel4.Controls.Add(this.直流源功率);
+            this.panel4.Controls.Add(this.直流源电压);
+            this.panel4.Controls.Add(this.label60);
+            this.panel4.Controls.Add(this.label61);
+            this.panel4.Controls.Add(this.label62);
+            this.panel4.Controls.Add(this.直流源电流);
+            this.panel4.Controls.Add(this.label63);
+            this.panel4.Controls.Add(this.label64);
+            this.panel4.Location = new System.Drawing.Point(404, 11);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(399, 350);
+            this.panel4.TabIndex = 317;
+            // 
+            // button21
+            // 
+            this.button21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button21.Location = new System.Drawing.Point(302, 279);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(86, 60);
+            this.button21.TabIndex = 302;
+            this.button21.Text = "读取数据";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click_1);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.SkyBlue;
+            this.label59.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label59.Location = new System.Drawing.Point(7, 13);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(95, 33);
+            this.label59.TabIndex = 360;
+            this.label59.Text = "电压:";
+            // 
+            // 直流源功率
+            // 
+            this.直流源功率.Font = new System.Drawing.Font("黑体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.直流源功率.Location = new System.Drawing.Point(102, 197);
+            this.直流源功率.Name = "直流源功率";
+            this.直流源功率.Size = new System.Drawing.Size(149, 41);
+            this.直流源功率.TabIndex = 289;
+            this.直流源功率.Text = "0.000";
+            // 
+            // 直流源电压
+            // 
+            this.直流源电压.Font = new System.Drawing.Font("黑体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.直流源电压.Location = new System.Drawing.Point(102, 9);
+            this.直流源电压.Name = "直流源电压";
+            this.直流源电压.Size = new System.Drawing.Size(149, 41);
+            this.直流源电压.TabIndex = 276;
+            this.直流源电压.Text = "0.000";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.BackColor = System.Drawing.Color.SkyBlue;
+            this.label60.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label60.Location = new System.Drawing.Point(7, 107);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(95, 33);
+            this.label60.TabIndex = 287;
+            this.label60.Text = "电流:";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.Color.SkyBlue;
+            this.label61.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label61.Location = new System.Drawing.Point(275, 110);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(31, 33);
+            this.label61.TabIndex = 228;
+            this.label61.Text = "A";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.Color.SkyBlue;
+            this.label62.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label62.Location = new System.Drawing.Point(275, 17);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(31, 33);
+            this.label62.TabIndex = 228;
+            this.label62.Text = "V";
+            // 
+            // 直流源电流
+            // 
+            this.直流源电流.Font = new System.Drawing.Font("黑体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.直流源电流.Location = new System.Drawing.Point(102, 103);
+            this.直流源电流.Name = "直流源电流";
+            this.直流源电流.Size = new System.Drawing.Size(149, 41);
+            this.直流源电流.TabIndex = 289;
+            this.直流源电流.Text = "0.0000";
+            this.直流源电流.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.BackColor = System.Drawing.Color.SkyBlue;
+            this.label63.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label63.Location = new System.Drawing.Point(7, 201);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(95, 33);
+            this.label63.TabIndex = 308;
+            this.label63.Text = "功率:";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.BackColor = System.Drawing.Color.SkyBlue;
+            this.label64.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label64.Location = new System.Drawing.Point(275, 203);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(31, 33);
+            this.label64.TabIndex = 288;
+            this.label64.Text = "W";
+            // 
             // textBox_fasong
             // 
             this.textBox_fasong.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1817,297 +2112,6 @@
             this.负载连接.Text = "负载连接";
             this.负载连接.Enter += new System.EventHandler(this.负载连接_Enter);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(823, 373);
-            this.tabPage2.TabIndex = 7;
-            this.tabPage2.Text = "直流源";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel3.Controls.Add(this.textBox11);
-            this.panel3.Controls.Add(this.开机按钮);
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.关机按钮);
-            this.panel3.Controls.Add(this.button12);
-            this.panel3.Controls.Add(this.button15);
-            this.panel3.Controls.Add(this.label53);
-            this.panel3.Controls.Add(this.label55);
-            this.panel3.Controls.Add(this.label56);
-            this.panel3.Controls.Add(this.label57);
-            this.panel3.Controls.Add(this.textBox16);
-            this.panel3.Location = new System.Drawing.Point(20, 11);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 350);
-            this.panel3.TabIndex = 318;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("黑体", 10.5F);
-            this.textBox11.Location = new System.Drawing.Point(80, 22);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(74, 23);
-            this.textBox11.TabIndex = 293;
-            this.textBox11.Text = "0000.0000";
-            // 
-            // 开机按钮
-            // 
-            this.开机按钮.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.开机按钮.Location = new System.Drawing.Point(132, 279);
-            this.开机按钮.Name = "开机按钮";
-            this.开机按钮.Size = new System.Drawing.Size(86, 60);
-            this.开机按钮.TabIndex = 307;
-            this.开机按钮.Text = "开机";
-            this.开机按钮.UseVisualStyleBackColor = true;
-            this.开机按钮.Click += new System.EventHandler(this.button6_Click_1);
-            // 
-            // button8
-            // 
-            this.button8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button8.Location = new System.Drawing.Point(15, 213);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(86, 60);
-            this.button8.TabIndex = 306;
-            this.button8.Text = "手动模式";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button9.Location = new System.Drawing.Point(15, 279);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(86, 60);
-            this.button9.TabIndex = 305;
-            this.button9.Text = "程控模式";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // 关机按钮
-            // 
-            this.关机按钮.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.关机按钮.Location = new System.Drawing.Point(260, 279);
-            this.关机按钮.Name = "关机按钮";
-            this.关机按钮.Size = new System.Drawing.Size(86, 60);
-            this.关机按钮.TabIndex = 301;
-            this.关机按钮.Text = "关机";
-            this.关机按钮.UseVisualStyleBackColor = true;
-            this.关机按钮.Click += new System.EventHandler(this.button11_Click_1);
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button12.Location = new System.Drawing.Point(224, 56);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(99, 43);
-            this.button12.TabIndex = 310;
-            this.button12.Text = "I_set";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click_1);
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button15.Location = new System.Drawing.Point(223, 12);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(99, 43);
-            this.button15.TabIndex = 310;
-            this.button15.Text = "V_set";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click_1);
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.BackColor = System.Drawing.Color.SkyBlue;
-            this.label53.Font = new System.Drawing.Font("黑体", 14.25F);
-            this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label53.Location = new System.Drawing.Point(20, 24);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(59, 19);
-            this.label53.TabIndex = 291;
-            this.label53.Text = "电压:";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.SkyBlue;
-            this.label55.Font = new System.Drawing.Font("黑体", 14.25F);
-            this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label55.Location = new System.Drawing.Point(161, 69);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(19, 19);
-            this.label55.TabIndex = 292;
-            this.label55.Text = "A";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.BackColor = System.Drawing.Color.SkyBlue;
-            this.label56.Font = new System.Drawing.Font("黑体", 14.25F);
-            this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label56.Location = new System.Drawing.Point(18, 68);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(59, 19);
-            this.label56.TabIndex = 294;
-            this.label56.Text = "电流:";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.SkyBlue;
-            this.label57.Font = new System.Drawing.Font("黑体", 14.25F);
-            this.label57.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label57.Location = new System.Drawing.Point(163, 24);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(19, 19);
-            this.label57.TabIndex = 295;
-            this.label57.Text = "V";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("黑体", 10.5F);
-            this.textBox16.Location = new System.Drawing.Point(79, 65);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(74, 23);
-            this.textBox16.TabIndex = 296;
-            this.textBox16.Text = "120.000";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel4.Controls.Add(this.button21);
-            this.panel4.Controls.Add(this.label59);
-            this.panel4.Controls.Add(this.textBox17);
-            this.panel4.Controls.Add(this.textBox18);
-            this.panel4.Controls.Add(this.label60);
-            this.panel4.Controls.Add(this.label61);
-            this.panel4.Controls.Add(this.label62);
-            this.panel4.Controls.Add(this.textBox19);
-            this.panel4.Controls.Add(this.label63);
-            this.panel4.Controls.Add(this.label64);
-            this.panel4.Location = new System.Drawing.Point(404, 11);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(399, 350);
-            this.panel4.TabIndex = 317;
-            // 
-            // button21
-            // 
-            this.button21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button21.Location = new System.Drawing.Point(302, 279);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(86, 60);
-            this.button21.TabIndex = 302;
-            this.button21.Text = "读取数据";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.BackColor = System.Drawing.Color.SkyBlue;
-            this.label59.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label59.Location = new System.Drawing.Point(7, 13);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(95, 33);
-            this.label59.TabIndex = 360;
-            this.label59.Text = "电压:";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Font = new System.Drawing.Font("黑体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox17.Location = new System.Drawing.Point(102, 197);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(149, 41);
-            this.textBox17.TabIndex = 289;
-            this.textBox17.Text = "0.000";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("黑体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox18.Location = new System.Drawing.Point(102, 9);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(149, 41);
-            this.textBox18.TabIndex = 276;
-            this.textBox18.Text = "0.000";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.SkyBlue;
-            this.label60.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label60.Location = new System.Drawing.Point(7, 107);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(95, 33);
-            this.label60.TabIndex = 287;
-            this.label60.Text = "电流:";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.SkyBlue;
-            this.label61.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label61.Location = new System.Drawing.Point(275, 110);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(31, 33);
-            this.label61.TabIndex = 228;
-            this.label61.Text = "A";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.SkyBlue;
-            this.label62.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label62.Location = new System.Drawing.Point(275, 17);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(31, 33);
-            this.label62.TabIndex = 228;
-            this.label62.Text = "V";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("黑体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox19.Location = new System.Drawing.Point(102, 103);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(149, 41);
-            this.textBox19.TabIndex = 289;
-            this.textBox19.Text = "0.0000";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.SkyBlue;
-            this.label63.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label63.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label63.Location = new System.Drawing.Point(7, 201);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(95, 33);
-            this.label63.TabIndex = 308;
-            this.label63.Text = "功率:";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.BackColor = System.Drawing.Color.SkyBlue;
-            this.label64.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label64.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label64.Location = new System.Drawing.Point(275, 203);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(31, 33);
-            this.label64.TabIndex = 288;
-            this.label64.Text = "W";
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2145,6 +2149,11 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SOE)).EndInit();
@@ -2152,11 +2161,6 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.负载指示)).EndInit();
             this.负载连接.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2309,7 +2313,7 @@
         private System.Windows.Forms.GroupBox 负载连接;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox 直流源电压设定值;
         private System.Windows.Forms.Button 开机按钮;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -2320,16 +2324,16 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox 直流源电流设定值;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox 直流源功率;
+        private System.Windows.Forms.TextBox 直流源电压;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox 直流源电流;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
     }

@@ -2578,7 +2578,6 @@ namespace 电源生产测试软件
         private void button20_Click_1(object sender, EventArgs e)
         {
             flag_btnclick = "读取电压";
-
             while (flag_btnclick == "读取电压")
             {          
                 ArrayForDc_elec_load();
@@ -2961,18 +2960,118 @@ namespace 电源生产测试软件
 
         }
 
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            flag_btnclick_pwr = "开机";
+            ArrayForDc_elec_pwr();
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
+        }
 
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            flag_btnclick_pwr = "关机";
+            ArrayForDc_elec_pwr();
 
-      
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
+        }
        
         private void button12_Click_1(object sender, EventArgs e)
         {
+            Array_Load.Clear();//清空逆变器动态数组
+            char[] a = String_to_char(直流源电流设定值.Text);
+            Array_Load.Add(Convert.ToByte('C'));//1
+            Array_Load.Add(Convert.ToByte('U'));//2
+            Array_Load.Add(Convert.ToByte('R'));//3
+            Array_Load.Add(Convert.ToByte('R'));//4
+            Array_Load.Add(Convert.ToByte(' '));//5
+            for (int i = 0; i < a.Length; i++)
+            {
+                Array_Load.Add(Convert.ToByte(a[i]));//5
+            }
+            Array_Load.Add(Convert.ToByte(0x0D));//6
+            Array_Load.Add(Convert.ToByte(0x0A));//6
+
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
 
         }
 
         private void button15_Click_1(object sender, EventArgs e)
         {
-    
+            Array_Load.Clear();//清空逆变器动态数组
+            char[] a = String_to_char(直流源电压设定值.Text);
+            Array_Load.Add(Convert.ToByte('V'));//1
+            Array_Load.Add(Convert.ToByte('O'));//2
+            Array_Load.Add(Convert.ToByte('L'));//3
+            Array_Load.Add(Convert.ToByte('T'));//4
+            Array_Load.Add(Convert.ToByte(' '));//5
+            for (int i = 0; i < a.Length; i++)
+            { 
+                Array_Load.Add(Convert.ToByte(a[i]));//5
+            }
+            Array_Load.Add(Convert.ToByte(0x0D));//6
+            Array_Load.Add(Convert.ToByte(0x0A));//6
+
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            flag_btnclick_pwr = "手动模式";
+            ArrayForDc_elec_pwr();
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            flag_btnclick_pwr = "程控模式";
+            ArrayForDc_elec_pwr();
+
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
+
+        }
+
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+            Array_Load.Clear();//清空逆变器动态数组
+            char[] a = String_to_char(直流源电压设定值.Text);//FETC:CURR?
+
+            flag_btnclick_pwr = "读取电压";
+            ArrayForDc_elec_pwr();
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            flag_btnclick_pwr = "读取电流";
+            ArrayForDc_elec_pwr();
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            flag_btnclick_pwr = "读取功率";
+            ArrayForDc_elec_pwr();
+            SendData_ShowData_Elec_load();
+            Com_Over_Time_Pro();
+            RecData_ShowData_New();
+            AllButton_true();
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
